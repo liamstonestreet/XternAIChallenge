@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-df = pd.read_csv("data.csv") # this should work. For some reason, it didn't for me, so I used the absolute path as shown below.
+# df = pd.read_csv("data.csv") # this should work. It didn't for me, so I used the absolute path as seen below.
 df = pd.read_csv("C:\\Users\\Owner\\Desktop\\Coding\\Xtern Application\\AI Prompt\\XternAIChallenge\\data.csv") # the given dataset (csv format)
 
 # plotting bar graph for class frequencies (sorted)

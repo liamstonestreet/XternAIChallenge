@@ -8,6 +8,7 @@ import pickle
 
 # preparing the data
 def load_and_prepare_data():
+    # df = pd.read_csv("data.csv") # this should work. It didn't for me, so I used the absolute path as seen below.
     df = pd.read_csv("C:\\Users\\Owner\\Desktop\\Coding\\Xtern Application\\AI Prompt\\XternAIChallenge\\data.csv") # the given dataset (csv format)
 
     # Encode categorical variables
