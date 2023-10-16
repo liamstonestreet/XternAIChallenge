@@ -25,6 +25,13 @@ plt.title('Popular Orders by University')
 plt.legend(loc='lower right')
 plt.show()
 
+# Number of orders taken (by Major)
+plt.figure(figsize=(10, 6))
+sns.countplot(data=df, y='Major', hue='Order')
+plt.title('Popular Orders by Major')
+plt.legend(loc='lower right')
+plt.show()
+
 # Average Time that orders are taken (by Major)
 plt.figure(figsize=(10, 6))
 plt.xticks(rotation=90)

@@ -1,4 +1,4 @@
-(1) -> Data Observations:
+(1 | 25%) -> Data Observations (using graphs from 'visualizing_data.py'):
   - The courses with the most students are Chemistry, Biology, Astronomy, Physics, and Mathematics. It drops off heavily from there.
   - The vast majority of FoodX orders take place in IU, Ball State University, Butler University, and IUPUI. The rest don't seem to order much.
     - IU's most popular order is the "Hoosier BBQ Pulled Pork Sandwhich".
@@ -7,9 +7,15 @@
   - Students of the same major typically order around the same times, except for Civil Engineering, Fine Arts, Philosophy, and Mechanical Engineering.
     - This could either be due to a difference in location (different unis have different class times), or due to a sporradic general curricula in terms of class timings.
   - Virtually no first or fourth year students order from FoodX. Out of second and third year students, the third year students order more in total. 
+  
+  - some additional fun stats:
+    - Mathematics majors love the 'Ultimate Grilled Cheese Sandwich (with bacon and tomato)' above all else
+    - Biology majors obsess over the 'Indiana Pork Chili '
+    - Philosophy majors have only ever ordered 'Sweet Potato Fries'
 
 
-(2) -> ** Consider implications of data collection, storage, and data biases you would consider 
+
+(2 | 30%) -> ** Consider implications of data collection, storage, and data biases you would consider 
           relevant here considering Data Ethics, Business Outcomes, and Technical Implications **
 
 Ethical implications:
@@ -33,7 +39,7 @@ Technical implications:
     - these majors might represent a significant portion of the population, especially at Purdue.
   - It is critical that the quality of the data is maintained; as more and more data is taken, data preprocessing and cleaning become more important.
 
-  (3) -> ** Build a model to predict a customers order from their available information. ** 
+  (3 | 30%) -> ** Build a model to predict a customers order from their available information. ** 
 
   - the code for the model is in the 'model.py' file.
   - I chose to use RandomForestClassifier for the following reasons:
@@ -41,7 +47,7 @@ Technical implications:
     - it automatically implements and utilizes feature selection (doesn't use data that isn't helpful in making the final prediction)
     - assuming that data relevant to students' orders is already given, there is no need to extrapolate to predictions for other data (so RF will work fine)
 
-  (4) -> ** Given the work required to bring a solution like this to maturity and its performance, 
+  (4 | 10%) -> ** Given the work required to bring a solution like this to maturity and its performance, 
             what considerations would you make to determine if this is a suitable course of action? **
 
   To determine if this solution is a suitable course of action, the following points need to be addressed:
