@@ -41,3 +41,30 @@ Technical implications:
     - it automatically implements and utilizes feature selection (doesn't use data that isn't helpful in making the final prediction)
     - assuming that data relevant to students' orders is already given, there is no need to extrapolate to predictions for other data (so RF will work fine)
 
+  (4) -> ** Given the work required to bring a solution like this to maturity and its performance, 
+            what considerations would you make to determine if this is a suitable course of action? **
+
+  To determine if this solution is a suitable course of action, the following points need to be addressed:
+
+  - we need to consider business factors, asking the following questions:
+    - what is our primary goal? Is it to maximize profits, improve student satisfaction, or something else?
+    - will the benefits of our solution outweigh the costs of implementing it?
+  - we need to confirm that we are following ethical and privacy policies
+    - make sure students' consent for data collection is present
+    - confirm anynomity is present in data collection (so students can't be identified or singled out using the data)
+    - ensure that the data is safely protected 
+  - we need to evaluate the quality and availability of our data, and figure out if it's good enough to justify the need of an ML model
+    - ensure there is enough data, or at least the capacity to record enough data so that the model doesn't overfit.
+    - ensure that the data is relevant to predicting what students will order. Improve the data by finding more factors that affect what students order.
+    - ensure the data does not have any major biases that might skew the accuracy of the model.
+  - we need to consider the prevalence of our model before implementing it
+    - accuracy might not always be a good indicator of model success, so combine with other metrics to evaluate the true capability of the model
+    - continually test model on new, unseen data to see how well it makes correct predictions
+  - some other things to think about:
+    - how the model will be deployed
+    - how the model will be maintained over time (continuous training and testing)
+    - how scalable the solution is (can it be scaled nation-wide, or even internationally?)
+
+
+
+
