@@ -27,6 +27,7 @@ def run_model():
 
     clf = RandomForestClassifier(n_estimators=100, random_state=42) # using a Random Forest Classifier
     clf.fit(X_train, y_train)
+    pickle_model(clf) # save the model to a file so that it can be accessed later without having to retrain it from scratch
 
     y_pred = clf.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
@@ -37,7 +38,7 @@ def pickle_model(model):
     # creates/overrides file named 'model.pkl'. 
     pickle.dump(model, open('model.pkl', 'wb')) # 'wb' means binary write mode. (writing to a file)
 
-# loading 
+# loading the model from an already-existing .pkl file (not used here, but relevant nevertheless)
 def load_model(path):
     # converts the specified file with filepath 'path' back into a model, and returns the model object
     return pickle.load(open(path, 'rb')) # 'rb' means binary read mode. (reading a file)
