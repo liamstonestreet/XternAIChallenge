@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import seaborn
 import pandas as pd
 
-df = pd.read_csv("C:\\Users\\Owner\\Desktop\\Coding\\Xtern Application\\AI Prompt\\data.csv")
+df = pd.read_csv("C:\\Users\\Owner\\Desktop\\Coding\\Xtern Application\\AI Prompt\\XternAIChallenge\\data.csv")
 
 # first five rows
 print(df.head())
@@ -19,3 +19,6 @@ print(df.head())
 df['Year'] = df['Year'].apply(lambda x: x.lstrip("Year "))   
 
 print(df.head())
+
+print(df['Major'].value_counts())
+print(type(df['Major'].value_counts()))

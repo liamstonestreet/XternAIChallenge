@@ -1,0 +1,43 @@
+(1) -> Data Observations:
+  - The courses with the most students are Chemistry, Biology, Astronomy, Physics, and Mathematics. It drops off heavily from there.
+  - The vast majority of FoodX orders take place in IU, Ball State University, Butler University, and IUPUI. The rest don't seem to order much.
+    - IU's most popular order is the "Hoosier BBQ Pulled Pork Sandwhich".
+    - Ball State University's top two most popular orders (comparable) are the "Indiana Corn on the Cob" and the "Breaded Pork Tenderloin Sandwhich".
+    - Butler University's most popular order is the "Indiana Pork Chili".
+  - Students of the same major typically order around the same times, except for Civil Engineering, Fine Arts, Philosophy, and Mechanical Engineering.
+    - This could either be due to a difference in location (different unis have different class times), or due to a sporradic general curricula in terms of class timings.
+  - Virtually no first or fourth year students order from FoodX. Out of second and third year students, the third year students order more in total. 
+
+
+(2) -> ** Consider implications of data collection, storage, and data biases you would consider 
+          relevant here considering Data Ethics, Business Outcomes, and Technical Implications **
+
+Ethical implications:
+  - An important question to ask when gathering any type of data is: did the population give consent to their data being recorded?
+  - No matter how insignificant the data being recorded seems, consent is a first priority.
+  - Relevance: the students' consent must be confirmed before collecting data regarding FoodX orders in universities.
+
+Business outcome implications:
+  - If consent is given, then this data can have significant positive benefits to FoodX business
+  - For example, FoodX can use the data to find out the following useful information:
+    - which universities put in the most orders
+    - which orders are most popular at each of those universities
+    - which types of students (year, major, etc) make those orders
+    - what times they make those orders at
+  - FoodX can utilize this information to better plan when and where they distribute their food trucks to maximize profits and user satisfaction.
+
+Technical implications:
+  - Depending on how much data FoodX decides to store, cloud storage might need to be utilized, in which case security must be a priority.
+  - When collecting data, biases should be considered; the goal is for data to be as representative as possible of the target population.
+    - for example, data was not collected on Computer Engineering, Computer Science, or Electrical Engineering majors
+    - these majors might represent a significant portion of the population, especially at Purdue.
+  - It is critical that the quality of the data is maintained; as more and more data is taken, data preprocessing and cleaning become more important.
+
+  (3) -> ** Build a model to predict a customers order from their available information. ** 
+
+  - the code for the model is in the 'model.py' file.
+  - I chose to use RandomForestClassifier for the following reasons:
+    - it is relatively not sensitive to outliers or skews
+    - it automatically implements and utilizes feature selection (doesn't use data that isn't helpful in making the final prediction)
+    - assuming that data relevant to students' orders is already given, there is no need to extrapolate to predictions for other data (so RF will work fine)
+
